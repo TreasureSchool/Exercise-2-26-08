@@ -20,6 +20,7 @@ public class BackupThread extends Thread {
    
     @Override
     public void run() {
+        //This entire function prints the contents of the List into a file, specifically in my Documents folder.
         while(true) {
             if(myCopy.size() > prevlines) {
                 try(FileWriter writer = new FileWriter("backup.txt", false)) {
